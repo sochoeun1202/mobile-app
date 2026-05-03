@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="title_activity_second">SecondActivity</string>
+    <string name="app_name">TempConvert</string>
+    <string name="temperature_convertor">Temperature Converter</string>
+    <string name="btn_convert">Convert</string>
+    <string name="hint_temperature">Enter Temperature</string>
+    <string name="label_c_to_f">°C to °F</string>
+    <string name="label_f_to_c">°F to °C</string>
+    <string name="result_placeholder">0.00</string>
+    <string name="error_empty">Please enter a value</string>
 </resources>
