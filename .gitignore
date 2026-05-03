@@ -51,3 +51,6 @@ fastlane/test_output
 
 # Bundletool
 *.apks
+
+# ingore google-service.json
+app/google-services.json
