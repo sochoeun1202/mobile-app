@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TempConvert</string>
+    <string name="app_name">Temperature Convert</string>
     <string name="temperature_convertor">Temperature Converter</string>
     <string name="btn_convert">Convert</string>
     <string name="hint_temperature">Enter Temperature</string>
