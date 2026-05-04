@@ -35,7 +35,7 @@ android {
             // to avoid "red lines" before the first successful sync.
             extensions.configure<com.google.firebase.appdistribution.gradle.AppDistributionExtension>("firebaseAppDistribution") {
                 appId = "1:233990249858:android:8f2ba4c87c2dea35cf839b"
-                releaseNotes = "New build from Gemini CLI"
+                releaseNotes = "Build Temperature Convertor App Version 1.0.0"
             }
         }
     }
