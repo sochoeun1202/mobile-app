@@ -1,3 +1,6 @@
+# Ignore Files
+FIREBASE_GUIDE.md
+
 # Built artifacts
 bin/
 gen/
