@@ -2,4 +2,4 @@
 
 # UI Design
 
-![screen001](images/Screenshot_001.png)
+<img src="images/Screenshot_001.png" width="300" />
