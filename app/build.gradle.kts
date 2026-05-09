@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.services)
-    alias(libs.plugins.firebase.appdistribution)
 }
 
 android {
@@ -17,7 +15,7 @@ android {
         minSdk = 30
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,14 +27,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-        }
-        debug {
-            // Using a more robust syntax that doesn't rely on generated accessors
-            // to avoid "red lines" before the first successful sync.
-            extensions.configure<com.google.firebase.appdistribution.gradle.AppDistributionExtension>("firebaseAppDistribution") {
-                appId = "1:233990249858:android:8f2ba4c87c2dea35cf839b"
-                releaseNotes = "Build Temperature Convertor App Version 1.0.0"
-            }
         }
     }
     compileOptions {
@@ -68,6 +58,4 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
-    // Firebase BOM
-    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
 }
