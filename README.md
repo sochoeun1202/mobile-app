@@ -1,15 +1,6 @@
-# Lesson
+# Food Items
 
-## Week03
-review
-- define id for component
-- bundle variable
-- paste value from one activity to one activity
-- live cycle
-
-### Bundle Variable
-
-### Paste Data
-- intent: open new activity or new app
-  - explicit
-  - implicit
+<img src="images/home.png" width="300" />
+<img src="images/fruit.png" width="300" />
+<img src="images/vegetable.png" width="300" />
+<img src="images/drink.png" width="300" />
