@@ -1,11 +1,3 @@
 <resources>
     <string name="app_name">MyApplication</string>
-    <string name="food_items">A Few Food Items</string>
-    <string name="image_items">image items</string>
-    <string name="fruit">Fruit</string>
-    <string name="vegetable">Vegetable</string>
-    <string name="drink">Drink</string>
-    <string name="item_name">Item Name</string>
-    <string name="default_image_item">default image item</string>
-    <string name="back">Back</string>
 </resources>
