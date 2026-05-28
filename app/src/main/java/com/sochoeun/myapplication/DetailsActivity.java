@@ -1,14 +1,12 @@
 package com.sochoeun.myapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -26,28 +24,29 @@ public class DetailsActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-    private ActivityResultLauncher<Intent> launcher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            result -> {
-                if (result.getResultCode() == Activity.RESULT_OK) {
-                    Intent data = result.getData();
-                    if (data != null) {
-                        // Get Bundle
-                        Person p = data.getParcelableExtra("person");
-                        if (p != null) {
-                            // Get String from Bundle
-                            String lastname = p.getLastname();
-                            TextView dataResult = findViewById(R.id.tvFirstName);
-                            dataResult.setText(lastname);
-                        }
-                    }
-                }
+
+        TextView tvFirstName = findViewById(R.id.tvFirstName);
+        TextView tvLastName = findViewById(R.id.tvLastName);
+        TextView tvPhone = findViewById(R.id.tvPhone);
+        TextView tvEmail = findViewById(R.id.tvEmail);
+        TextView tvAddress = findViewById(R.id.tvAddress);
+        Button btnBack = findViewById(R.id.btnBack);
+
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("person")) {
+            Person p = intent.getParcelableExtra("person");
+            if (p != null) {
+                tvFirstName.setText(p.getFirstname());
+                tvLastName.setText(p.getLastname());
+                tvPhone.setText(p.getPhone());
+                tvEmail.setText(p.getEmail());
+
+                String fullAddress = String.format("House %s, St %s, %s, %s, %s",
+                        p.getHouse(), p.getStreet(), p.getSangKat(), p.getKhan(), p.getCity());
+                tvAddress.setText(fullAddress);
             }
-    );
-    public void onClickDetailHandler(View view){
-        Intent intent = new Intent();
-        intent.setClass(getApplicationContext(), MainActivity.class);
-        launcher.launch(intent);
+        }
+
+        btnBack.setOnClickListener(v -> finish());
     }
 }
