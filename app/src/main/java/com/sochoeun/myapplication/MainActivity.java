@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.content.res.ColorStateList;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,15 +43,15 @@ public class MainActivity extends AppCompatActivity {
                     // Hide password
                     etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                     btnTogglePassword.setImageResource(R.drawable.ic_visibility);
+                    btnTogglePassword.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(MainActivity.this, R.color.label_grey)));
+                    btnTogglePassword.setContentDescription("Show Password");
                     isPasswordVisible = false;
                 } else {
                     // Show password
                     etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    // Assuming you have an 'ic_visibility_off' drawable, otherwise you might need one.
-                    // For now, I will use a placeholder or assume you might want to create an 'ic_visibility_off.xml'.
-                    // Actually, since I don't see 'ic_visibility_off' in the directory list, I'll advise the user to add it.
-                    // Let's check the drawable list again.
-                    btnTogglePassword.setImageResource(R.drawable.ic_visibility); // Placeholder logic
+                    btnTogglePassword.setImageResource(R.drawable.ic_visibility_off);
+                    btnTogglePassword.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(MainActivity.this, R.color.primary_green)));
+                    btnTogglePassword.setContentDescription("Hide Password");
                     isPasswordVisible = true;
                 }
                 // Move cursor to the end of the text
