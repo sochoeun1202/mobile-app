@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Precise Figma Color Palette -->
+    <color name="primary_green">#2BA84A</color>
+    <color name="secondary_green">#248232</color>
+    <color name="tertiary_dark">#2D3A3A</color>
+    <color name="neutral_white">#FCFFFC</color>
+
+    <!-- Layout helper colors -->
+    <color name="background_dark">#0A0E0D</color>
+    <color name="card_dark">#161F1E</color>
+    <color name="hint_grey">#607371</color>
+    <color name="label_grey">#90A4A2</color>
+    <color name="divider_color">#334544</color>
 </resources>
