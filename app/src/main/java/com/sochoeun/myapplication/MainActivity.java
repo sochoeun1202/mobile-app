@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -56,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // Move cursor to the end of the text
                 etPassword.setSelection(etPassword.getText().length());
+            }
+        });
+        // Navigate to Signup screen
+        TextView tvSignUpLink = findViewById(R.id.tv_sign_up_link);
+        tvSignUpLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignupActivity.class);
+                startActivity(intent);
             }
         });
     }

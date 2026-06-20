@@ -233,13 +233,12 @@
                     android:orientation="horizontal"
                     android:paddingHorizontal="24dp"
                     app:layout_constraintTop_toBottomOf="@id/tv_forgot_credentials"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     tools:ignore="UseEasyTouchTarget">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/login"
+                        android:text="LOGIN"
                         android:textColor="@color/background_dark"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -253,6 +252,37 @@
                         app:tint="@color/background_dark"
                         tools:ignore="ContentDescription" />
 
+                </LinearLayout>
+
+                <!-- Footer SIGN UP navigation link -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_login"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't have an account? "
+                        android:textColor="@color/label_grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_up_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SIGN UP"
+                        android:textColor="@color/primary_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
