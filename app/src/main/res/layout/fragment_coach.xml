@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Coach Icon -->
+            <ImageView
+                android:id="@+id/iv_coach_icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_coach"
+                app:tint="@color/primary_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_coach_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="ELITE COACHING"
+                android:textColor="@color/neutral_white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.03"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_coach_icon" />
+
+            <!-- Coach Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_coach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/card_background"
+                android:padding="24dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_coach_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- Avatar outline or icon -->
+                <ImageView
+                    android:id="@+id/iv_coach_avatar"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/primary_green"
+                    android:background="@drawable/tab_selected_background"
+                    android:backgroundTint="@color/tertiary_dark"
+                    android:padding="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Coach Name -->
+                <TextView
+                    android:id="@+id/tv_coach_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="COACH ALEX RIVERA"
+                    android:textColor="@color/neutral_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_coach_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_coach_avatar" />
+
+                <!-- Specialty -->
+                <TextView
+                    android:id="@+id/tv_coach_specialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Strength &amp; Metabolic Conditioning"
+                    android:textColor="@color/primary_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_coach_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/tv_coach_name" />
+
+                <View
+                    android:id="@+id/coach_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@id/iv_coach_avatar" />
+
+                <!-- Description Bio -->
+                <TextView
+                    android:id="@+id/tv_coach_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Over 10 years of experience coaching elite athletes and fitness enthusiasts. Specializes in custom functional training, heavy compound movements, and metabolic rate maximization."
+                    android:textColor="@color/hint_grey"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/coach_divider" />
+
+                <!-- Button to chat -->
+                <Button
+                    android:id="@+id/btn_message_coach"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/secondary_green"
+                    android:text="MESSAGE COACH"
+                    android:textColor="@color/neutral_white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    app:layout_constraintTop_toBottomOf="@id/tv_coach_bio"
+                    tools:ignore="UnusedAttribute" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
