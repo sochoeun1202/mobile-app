@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="fitpro">FitPro</string>
+    <string name="elite_performance_tracking">ELITE PERFORMANCE TRACKING</string>
+    <string name="username">USERNAME</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="password">PASSWORD</string>
+    <string name="toggle_password_visibility">Toggle Password Visibility</string>
+    <string name="forgot_credentials">FORGOT CREDENTIALS?</string>
+    <string name="login">LOGIN</string>
 </resources>
