@@ -91,7 +91,7 @@ public class SignupActivity extends AppCompatActivity {
         tvSignInLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish(); // Close this Activity and return to MainActivity (Login)
+                finish(); // Close this Activity and return to LoginActivity
             }
         });
 
