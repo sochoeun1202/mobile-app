@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_home, container, false);
             TextView tvUsernameDisplay = view.findViewById(R.id.tv_username_display);
             if (tvUsernameDisplay != null) {
-                tvUsernameDisplay.setText(displayName);
+                tvUsernameDisplay.setText(displayNormalName);
             }
         } else {
             view = inflater.inflate(R.layout.fragment_home_unsubscribed, container, false);
