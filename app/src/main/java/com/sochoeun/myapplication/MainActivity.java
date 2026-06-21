@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void switchFragment(int index) {
+    public void switchFragment(int index) {
         Fragment selectedFragment;
         switch (index) {
             case 0:

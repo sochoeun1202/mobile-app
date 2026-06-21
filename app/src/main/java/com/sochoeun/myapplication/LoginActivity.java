@@ -49,6 +49,12 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d(TAG, "Login Attempt - Username: " + username);
                 Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
 
+                // Reset subscription status on new login for demonstration purposes
+                getSharedPreferences("metabolic_prefs", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("is_subscribed", false)
+                    .apply();
+
                 // Navigate to MainActivity (Home/Dashboard)
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 intent.putExtra("USERNAME", username); // Pass the username to dashboard
