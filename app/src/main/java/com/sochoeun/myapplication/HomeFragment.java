@@ -52,6 +52,18 @@ public class HomeFragment extends Fragment {
             if (tvUsernameDisplay != null) {
                 tvUsernameDisplay.setText(displayNormalName);
             }
+            TextView tvPlanRemaining = view.findViewById(R.id.tv_plan_remaining);
+            TextView tvPlanExpiration = view.findViewById(R.id.tv_plan_expiration);
+            if (prefs != null) {
+                String remaining = prefs.getString("plan_remaining", "7 Days");
+                String expiration = prefs.getString("plan_expiration", "June 28, 2026");
+                if (tvPlanRemaining != null) {
+                    tvPlanRemaining.setText(remaining);
+                }
+                if (tvPlanExpiration != null) {
+                    tvPlanExpiration.setText("Expires: " + expiration);
+                }
+            }
         } else {
             view = inflater.inflate(R.layout.fragment_home_unsubscribed, container, false);
             TextView tvAthleteName = view.findViewById(R.id.tv_athlete_name);
